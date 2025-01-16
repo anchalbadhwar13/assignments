@@ -26,13 +26,26 @@ class AList
         // remove all list contents 
         // 
         // Implement this...
+        // for (int i = 0; i < theSize; ++i) {
+        //   objects[i] = 0;
+        // }
+
+        // for (int i = 0; i < size; ++i) {
+        //   cout << objects[i] <<" ";
+        // }
+
+        for (int i = 0; i < n; i++){
+          if (objects[i] == 
+        }
     }
 
     // Operations 
 
     void addLeft( const Object x )// Insert a new object at the left end 
     {
-	// Implement this....
+	
+  
+  // Implement this....
     }
 
     void addRight( const Object x )// Insert a new object at the right end
