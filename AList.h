@@ -34,16 +34,18 @@ class AList
         //   cout << objects[i] <<" ";
         // }
 
-        for (int i = 0; i < n; i++){
-          if (objects[i] == 
-        }
+        // for (int i = 0; i < n; i++){
+        //   if (objects[i] == 
+        // }
     }
 
     // Operations 
 
     void addLeft( const Object x )// Insert a new object at the left end 
     {
-	
+        objects[left] = x;
+        left = (left-1) % theCapacity;
+        theSize++;
   
   // Implement this....
     }
@@ -51,18 +53,19 @@ class AList
     void addRight( const Object x )// Insert a new object at the right end
     {
         theSize ++ ;
-	objects[right] = x ;
-        right = (right+1) % theCapacity 
+	      objects[right] = x ;
+        right = (right+1) % theCapacity;
     }
 
     Object removeRight( )// Remove and return the object at the right end
     {
-        // Implement this 
+        right = [right-1] % theCapacity;
+        theSize--;
     }
 
     Object removeLeft( )// Remove and return the object at the left end
     {
-        // Implement this 
+        left = [left ]
     }
 
     void display() const // print out the contents of the deque
