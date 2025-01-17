@@ -26,17 +26,10 @@ class AList
         // remove all list contents 
         // 
         // Implement this...
-        // for (int i = 0; i < theSize; ++i) {
-        //   objects[i] = 0;
-        // }
-
-        // for (int i = 0; i < size; ++i) {
-        //   cout << objects[i] <<" ";
-        // }
-
-        // for (int i = 0; i < n; i++){
-        //   if (objects[i] == 
-        // }
+     theSize = 0;
+    left = 0;
+    right = 1 ;
+      delete [] objects;
     }
 
     // Operations 
@@ -47,7 +40,7 @@ class AList
         left = (left-1) % theCapacity;
         theSize++;
   
-  // Implement this....
+  
     }
 
     void addRight( const Object x )// Insert a new object at the right end
@@ -59,25 +52,37 @@ class AList
 
     Object removeRight( )// Remove and return the object at the right end
     {
-        right = [right-1] % theCapacity;
+        right = (right-1) % theCapacity;
         theSize--;
     }
 
     Object removeLeft( )// Remove and return the object at the left end
     {
-        left = [left ]
+        left = (left+1) % theCapacity;
+        theSize --;
     }
 
     void display() const // print out the contents of the deque
     {
        // Implement this.
+       for (int i = left+1; i < right; ++i) {
+        cout << objects[i % theCapacity] << " ";
+       }
     }
 
     void ddisplay() const // print out the contents of the objects 
     // array, and relevant variables, for debugging or verifying 
     // correctness. 
     {
-        // Implement this. 
+        cout << "--OBJECTS--\n";
+        for (int i = left+1; i < right; ++i) {
+        cout << objects[i % theCapacity] << " ";
+       }
+       cout << "\nSize:: " << theSize;
+       cout << "\nLeft:: " << left;
+       cout << "\nRight:: " << right;
+       cout << "\nCapacity:: " << theCapacity;
+
     }
 
 
